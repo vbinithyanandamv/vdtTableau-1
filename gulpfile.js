@@ -15,11 +15,11 @@ function cleanDist() {
 	])
 }
 
-function compileBabel() {
-	return gulp.src(['src/**/*.tsx', 'src/**/*.ts'])
-		.pipe(babel())
-		.pipe(gulp.dest('dist/'))
-}
+// function compileBabel() {
+// 	return gulp.src(['src/**/*.tsx', 'src/**/*.ts'])
+// 		.pipe(babel())
+// 		.pipe(gulp.dest('dist/'))
+// }
 
 function buildTypes() {
 	var tsProject = ts.createProject('./tsconfig.json', {
@@ -61,8 +61,7 @@ function copyCSS() {
 }
 
 const compileCSS = gulp.series(compileSCSS, copyCSS);
-const compileTS = gulp.series(compileBabel);
 const copyFiles = gulp.series(copyPublic, copyTrex);
 const generateTypes = gulp.series(buildTypes, concatTypes);
 
-exports.build = gulp.series(cleanDist, compileTS, copyFiles, generateTypes);
+exports.build = gulp.series(cleanDist,copyFiles, generateTypes);

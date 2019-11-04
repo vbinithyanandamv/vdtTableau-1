@@ -6,7 +6,8 @@
   "scripts": {
     "storybook": "start-storybook -p 9002 -c .storybook",
     "build": "gulp build",
-    "prepublishOnly": "gulp build"
+    "prepublishOnly": "gulp build",
+    "webbuild": "npm run build  && webpack --config webpack.config.js"
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -51,7 +52,9 @@
     "gulp-umd": "^2.0.0",
     "node-sass": "^4.11.0",
     "react-scripts": "^3.0.1",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   },
   "author": "VisualBi"
 }
