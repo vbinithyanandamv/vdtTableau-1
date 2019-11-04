@@ -12,47 +12,29 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
     
-
+    <link href="../../node_modules/@visualbi/vdt/dist/style.css" rel="stylesheet">
   </head>
   <body>
-    <div  class="container">
-      <!-- Filters Table -->
-      <div id="filters">
-        <h4>Current Filters</h4>
-        <div class="table-responsive">
-          <table id="loading" class="table">
-            <tbody><tr><td>Loading...</td></tr></tbody>
-          </table>     
-          <table id="filtersTable" class="table table-striped hidden">
-            <thead>
-              <tr>
-                <th>Filtered Field</th>
-                <th>Filtered Worksheet</th>
-                <th>Filter Type</th>
-                <th style="width: 100%">Current Values</th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
-          </table>
-          <table id="noFiltersWarning" class="table bg-danger hidden">
-            <tbody><tr><td>There are no filters currently active in this dashboard.</td></tr></tbody>
-          </table>
+      <div class="root">
+        <div class="nav-container">
+
         </div>
-      </div>
+        <div class="tree-container">
+
+        </div>
+        <div class="grid-container">
+        
+        </div>
+    </div>
 
       <!-- New Settings Submission Form -->
-      <div id="filterActions">
-        <button id="clear" type="button" class="btn btn-primary">Clear All</button>
-      </div>
-    </div>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
 
     <!-- Extensions Library (this will be hosted on a CDN eventually) -->
     <script src="./lib/tableau-extensions-1.2.0.min.js"></script>
-
+    <script src="../../node_modules/@visualbi/vdt/dist/index.js"></script>
+    <script src="../index.js"></script>
     <!-- Our extension's code -->
     <script src="./index.js"></script>
-    <script src="node_modules/@visualbi/vdt/dist/index.js"></script>
   </body>
 </html>
