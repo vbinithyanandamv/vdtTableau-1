@@ -11,17 +11,11 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    
 
-    <!-- Extensions Library (this will be hosted on a CDN eventually) -->
-    <script src="./lib/tableau-extensions-1.2.0.min.js"></script>
-
-    <!-- Our extension's code -->
-    <script src="../js/bundle.js"></script>
-    <script src="./index.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div  class="container">
       <!-- Filters Table -->
       <div id="filters">
         <h4>Current Filters</h4>
@@ -52,5 +46,13 @@
         <button id="clear" type="button" class="btn btn-primary">Clear All</button>
       </div>
     </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+
+    <!-- Extensions Library (this will be hosted on a CDN eventually) -->
+    <script src="./lib/tableau-extensions-1.2.0.min.js"></script>
+
+    <!-- Our extension's code -->
+    <script src="./index.js"></script>
+    <script src="node_modules/@visualbi/vdt/dist/index.js"></script>
   </body>
 </html>

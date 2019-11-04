@@ -1,17 +1,21 @@
 {
   "name": "VDT-Tableau",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "description": "Bifrost UI Framework",
   "scripts": {
     "storybook": "start-storybook -p 9002 -c .storybook",
     "build": "gulp build",
     "prepublishOnly": "gulp build",
-    "webbuild": "npm run build  && webpack --config webpack.config.js"
+    "build:types": "tsc --emitDeclarationOnly",
+    "webbuild": "gulp build && webpack --config webpack.config.js --env.mode dev --watch"
   },
   "dependencies": {
+    "@visualbi/vdt-editor": "^1.0.0-rc8-fabric",
     "classnames": "^2.2.6",
     "color-rgba": "^2.1.0",
+    "core-js": "^3.1.3",
     "jsep": "^0.3.4",
     "mobx": "4.6.0",
     "mobx-react": "5.0.0",
@@ -50,11 +54,13 @@
     "gulp-sass": "^4.0.2",
     "gulp-typescript": "^5.0.1",
     "gulp-umd": "^2.0.0",
+    "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.11.0",
     "react-scripts": "^3.0.1",
     "typescript": "^3.5.2",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-merge": "^4.2.2"
   },
   "author": "VisualBi"
 }

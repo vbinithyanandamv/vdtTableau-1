@@ -3,7 +3,7 @@
         "src/**/*"
     ],
     "compilerOptions": {
-        "outDir": "./dist/types",
+        "outDir": "./dist/",
         "sourceMap": true,
         "noImplicitAny": false,
         "module": "UMD",

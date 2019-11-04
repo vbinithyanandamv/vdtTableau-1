@@ -64,4 +64,4 @@ const compileCSS = gulp.series(compileSCSS, copyCSS);
 const copyFiles = gulp.series(copyPublic, copyTrex);
 const generateTypes = gulp.series(buildTypes, concatTypes);
 
-exports.build = gulp.series(cleanDist,copyFiles, generateTypes);
+exports.build = gulp.series(cleanDist, copyFiles, generateTypes);
