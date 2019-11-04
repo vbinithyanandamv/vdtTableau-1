@@ -1,0 +1,23 @@
+{
+    "include": [
+        "src/**/*"
+    ],
+    "compilerOptions": {
+        "outDir": "./dist/types",
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "module": "UMD",
+        "moduleResolution": "node",
+        "target": "es5",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "lib": [
+            "dom",
+            "es6",
+            "es7"
+        ],
+        "declaration": true,
+        "jsx": "react"
+    }
+}
