@@ -1,24 +1,3 @@
-// const path = require('path');
-// module.exports = {
-//   entry: "./src/js/index.ts",
-//   output: {
-//     libraryTarget: 'umd',
-//     library: 'VDTTBX',
-//     path: path.resolve(__dirname, "dist/js"),
-//     filename: "bundle.js"
-//   },
-//   module: {
-//     rules: [
-//       {
-//         test: /\.ts$/,
-//         loader: 'babel-loader',
-//       },
-//     ]
-//   }
-// };
-
-
-
 const path = require('path');
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
@@ -75,7 +54,7 @@ const common = {
     output: {
         library: libraryName,
         libraryTarget: 'umd',
-        filename: 'index.js',
+        filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
     }
 };

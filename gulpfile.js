@@ -41,6 +41,10 @@ function concatTypes() {
 		.pipe(gulp.dest("./dist"));
 }
 
+function moveLib(){
+	return gulp.src(['node_modules/@visulabi/vdt/**/*']).pipe(gulp.dest('public/lib/vdt'));
+}
+
 function copyPublic(){
 	return gulp.src(['public/**/*']).pipe(gulp.dest('dist/public'));
 }
@@ -61,7 +65,7 @@ function copyCSS() {
 }
 
 const compileCSS = gulp.series(compileSCSS, copyCSS);
-const copyFiles = gulp.series(copyPublic, copyTrex);
+const copyFiles = gulp.series(moveLib,copyPublic, copyTrex);
 const generateTypes = gulp.series(buildTypes, concatTypes);
 
 exports.build = gulp.series(cleanDist, copyFiles, generateTypes);
