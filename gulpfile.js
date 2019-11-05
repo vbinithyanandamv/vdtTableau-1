@@ -42,11 +42,11 @@ function concatTypes() {
 }
 
 function moveLib(){
-	return gulp.src(['node_modules/@visulabi/vdt/**/*']).pipe(gulp.dest('public/lib/vdt'));
+	return gulp.src(['node_modules/@visualbi/vdt/**/*']).pipe(gulp.dest('dist/public/lib/vdt'));
 }
 
 function copyPublic(){
-	return gulp.src(['public/**/*']).pipe(gulp.dest('dist/public'));
+	return gulp.src(['public_code/**/*']).pipe(gulp.dest('dist/public'));
 }
 
 function copyTrex(){
@@ -65,7 +65,7 @@ function copyCSS() {
 }
 
 const compileCSS = gulp.series(compileSCSS, copyCSS);
-const copyFiles = gulp.series(moveLib,copyPublic, copyTrex);
+const copyFiles = gulp.series(copyPublic, moveLib,  copyTrex);
 const generateTypes = gulp.series(buildTypes, concatTypes);
 
 exports.build = gulp.series(cleanDist, copyFiles, generateTypes);

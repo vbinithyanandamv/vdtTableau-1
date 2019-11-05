@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+
+.root {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-container {
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    width: 320px;
+    left: 0px;
+    border: 1px solid #ccc;
+}
+
+.tree-container {
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    left: 320px;
+    right: 0px;
+    border: 1px solid #ccc;
+}
+
+*::-webkit-scrollbar {
+    width: 11px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c8c8c8; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8; 
+}
