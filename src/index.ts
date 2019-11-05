@@ -16,14 +16,23 @@ export class App {
         this.editorConatiner.classList.add("editor-container");
         this.rootEl.appendChild(this.editorConatiner);
         this.render();
-        this.setProperties();
+        Tableau.extensions.initializeAsync({
+            'configure': ()=>{}
+        })
+        .then(():void => {
+            this.setProperties();
+            this.render();
+            // this.registerSettingsChangeEventListener();
+        });
+        
+       
         // this.renderVdtEditor();
     }
-
     private setProperties(): void {
-            TableauUtils.setProperty("abc", "abc");
+        // Object.keys(this.editor).map(key => {
+            TableauUtils.setProperty("key", "this.editor[key]");
+        // });
     }
-
     public renderVdtEditor() {
         const editorConfiguration = {
             globals: {
@@ -45,16 +54,12 @@ export class App {
                 },
                 launchUrl: ""
             }
-
         };
         loadEditor(this.editorConatiner, { configurations: editorConfiguration, listener: () => { }, getPropertyValue: () => { } });
     }
-
     public removeVdtEditor() {
         removeEditor(this.editorConatiner);
     }
-
-
     render() {
         const treeConf = {
             type: "tree",
@@ -62,7 +67,7 @@ export class App {
             rootContainer: this.rootEl,
             properties: {}
         };
-
+        // console.log(Tableau.extensions.settings.getAll())
         const vdtComp = (window as any).Vdt.ComposeVisual.createVisual(treeConf);
         const navComp = (window as any).Vdt.ComposeVisual.createVisual({
             type: "navpanel",
@@ -75,3 +80,8 @@ export class App {
         });
     }
 }
+
+
+
+
+
