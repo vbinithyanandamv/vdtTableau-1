@@ -11,4 +11,10 @@ export class TableauUtils{
         }
         return null;
     }
+    static getAllProperty(){
+        if ((window as any).tableau.extensions.settings) {
+            return (window as any).tableau.extensions.settings.getAll();
+        }
+        return null;
+    }
 }

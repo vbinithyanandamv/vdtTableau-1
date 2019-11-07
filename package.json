@@ -11,8 +11,10 @@
     "dev": "http-server -p 4344 dist"
   },
   "dependencies": {
+    "@visualbi/bifrost-ui": "^1.0.0-rc14-fabric",
     "@visualbi/vdt": "1.4.0-rc1910290712",
     "@visualbi/vdt-editor": "^1.0.0-rc8-fabric",
+    "@visualbi/vdt-wizbar": "^1.0.0-rc3-tableau",
     "classnames": "^2.2.6",
     "color-rgba": "^2.1.0",
     "file-loader": "^4.2.0",

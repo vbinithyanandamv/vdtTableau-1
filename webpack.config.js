@@ -34,6 +34,16 @@ const common = {
                     "css-loader"
                 ]
             },
+            // // Library CSS (from node_modules)
+            // {
+            //     test: /\.css$/,
+            //     use: {
+            //         loader: 'style-loader',
+            //       },
+            //     exclude: [
+            //     path.resolve(__dirname, '../styles')
+            //     ],
+            // },
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
                 use: [
