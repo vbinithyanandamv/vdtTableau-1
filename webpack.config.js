@@ -35,6 +35,14 @@ const common = {
                 ]
             },
             {
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                use: [
+                  {
+                    loader: 'file-loader',
+                  },
+                ],
+              },
+            {
                 test: /\.(woff(2)?|ttf|eot)$/,
                 use: 'base64-inline-loader'
             }

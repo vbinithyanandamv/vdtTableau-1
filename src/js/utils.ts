@@ -1,9 +1,14 @@
 export class TableauUtils{
      static getProperty(property){
-        return (window as any).tableau.extensions.settings.get(property);
+        if ((window as any).tableau.extensions.settings) {
+            return (window as any).tableau.extensions.settings.get(property);
+        }
+        return null;
     }
      static setProperty(property,value){
-        (window as any).tableau.extensions.settings.set(property,value);
-         return (window as any).tableau.extensions.settings.saveAsync();
+        if ((window as any).tableau.extensions.settings) {
+            (window as any).tableau.extensions.settings.set(property,value);
+        }
+        return null;
     }
 }

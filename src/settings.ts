@@ -43,7 +43,7 @@ export class ValqServer {
 
 export class EditorProperties {
     public periodsConfig: string = "{}";
-    public seriesGenerationMethod: string = null; // does not come from VDT Core
+    public seriesGenerationMethod: string = ""; // does not come from VDT Core
     public data: NS_Tree.ITreeData = property.data;
     public sourceRef: string = property.sourceRef;
     public configServerMap: NS_Tree.IConfigServer[] = property.configServerMap;
