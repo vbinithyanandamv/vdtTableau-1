@@ -7,12 +7,12 @@
   "scripts": {
     "build": "gulp build",
     "build:types": "tsc --emitDeclarationOnly",
-    "webbuild": "gulp build && webpack --config webpack.config.js --env.mode dev ",
-    "dev": "http-server -p 8080 dist"
+    "webbuild": "gulp build && webpack --config webpack.config.js --env.mode dev",
+    "dev": "webpack-dev-server --env.mode dev --open"
   },
   "dependencies": {
+    "@visualbi/vdt": "1.4.0-rc1910301024",
     "@visualbi/vdt-editor": "^1.0.0-rc8-fabric",
-    "@visualbi/vdt": "1.4.0-rc1910290712",
     "classnames": "^2.2.6",
     "color-rgba": "^2.1.0",
     "jsep": "^0.3.4",
@@ -25,7 +25,8 @@
     "react-input-trigger": "^1.1.2",
     "react-resizable": "^1.7.5",
     "react-simple-colorpicker": "^1.4.2",
-    "react-sortable-hoc": "^0.8.4"
+    "react-sortable-hoc": "^0.8.4",
+    "webpack-dev-server": "^3.9.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.0",

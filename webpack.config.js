@@ -17,11 +17,17 @@ const common = {
         rules: [
             {
                 test: /\.ts||.tsx$/,
-                use: 'babel-loader',
+                use: {
+                    loader: "babel-loader", 
+                    options: {
+                        presets: ["@babel/preset-env"]  //Preset used for env setup
+                    }
+                },
                 exclude: [
                     /node_modules/,
                     /test/
                 ]
+                
             },
             {
                 test: /\.css$/,
